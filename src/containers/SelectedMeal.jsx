@@ -25,19 +25,23 @@ const SelectedMovie = () => {
   }, [id]);
 
   return (
-    <div className="w-4/5">
-      <div className="w-full mt-4 bg-slate-100 flex">
-        <img
-          className="object-contain  h-30 w-30"
-          src={`${movie.strMealThumb}`}
-          alt="Placeholder"
-        />
-        <div className="flex flex-col gap-2 p-4 text-start justify-between">
-          <div>
-            <div className="text-xl font-semibold">{movie.strMeal}</div>
-            <div className="flex flex-col gap-4 align-top">
-              <div>{movie.strInstructions}</div>
-            </div>
+    <section class="text-gray-700 body-font overflow-hidden bg-white">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-4/5 mx-auto flex flex-wrap">
+          <img
+            alt="ecommerce"
+            class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
+            src={`${movie.strMealThumb}`}
+          />
+          <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+            <h2 class="text-sm title-font text-gray-500 tracking-widest">
+              FOOD NAME
+            </h2>
+            <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">
+              {movie.strMeal}
+            </h1>
+
+            <p class="leading-relaxed">{movie.strInstructions}</p>
             <div className="text-xl font-semibold">Ingredient</div>
             <div className="text-p">{movie.strIngredient1}</div>
             <div className="text-p">{movie.strIngredient2}</div>
@@ -47,7 +51,7 @@ const SelectedMovie = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
